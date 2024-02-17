@@ -1,0 +1,27 @@
+
+# # # print ("what is your age")
+# # # age = int (input())
+# # # if age<18:
+# # #     print("you can not drive")
+# # # elif age==18:
+# # #     print("we will think about it")
+# # # else:
+# # #     print("you can drive")
+# # # import math
+# # # math.factorial (5)
+# # x=input("enter the first number")
+# # y=input("enter the second number")
+# # print("the multiplication:",int(x)*int(y))
+# p=input("enter the principle amount:")
+# i=input("enter the interest rate:")
+# t=input("enter time:")
+# s=int(p)*float(i)*int(t)/100
+# print("simple interest",s)
+num=0
+if num>0:
+    print("the number is positive")
+    a=10
+elif num<0:
+    print("the number is negative")
+else:
+    print("num is zero")

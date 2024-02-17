@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Details</title>
+</head>
+<body>
+{% block baseblock %}
+<h1 align="center">Course Details</h1>
+{% if stud_list %}
+<table border="2px" align="center">
+    <thead>
+    <th>course id </th>
+    <th>Course Name</th>
+    <th>Course Duration</th>
+    <th>Course Fees</th>
+    <th>Course Mentor </th>
+    <th>Action</th>
+
+   </thead>
+
+{% for student in stud_list %}
+<tr>
+    <td>{{ student.id}}</td>
+    <td>{{ student.cname}}</td>
+    <td>{{ student.cduration }}</td>
+    <td>{{ student.cfees }}</td>
+    <td>{{ student.cmentor}}</td>
+
+    <td>
+
+        <a href="/courseinfo/update/{{student.id}}"class="btn btn-primary">Upadte</a>
+        <a href="/courseinfo/delete/{{student.id}}"class=""btn btn-warning"">Delete</a>
+<!--        <a href=""class="btn btn-warning">Delete</a>-->
+<!--        <button type="button" class="btn btn-warning">delete</button>-->
+    </td>
+</tr>
+    {%endfor%}
+
+</table>
+{%else%}
+<h1>no data found</h1>
+{% endif %}
+{%endblock%}
+</body>
+</html>

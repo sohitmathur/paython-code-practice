@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome To Cars 24</title>
+<style>
+  body{
+  background-color: orange;
+  colour: seashell;
+}
+</style>
+</head>
+<body>
+<!--     {{data}}-->
+     {% for key,value in data.items%}
+     {{key}} = {{value}}<br>
+     {% for k,v in value.items %}
+     {{k}} = {{v}} <br>
+     {% endfor %}
+     {% endfor %}
+<!--<h2>Emp_Name:{{nm}},Emp_dept:{{fu}},Emp_sal:{{su}}</h2>-->
+<!--<h1>{{dt|date:'D d M Y'}}</h1>-->
+<!--<h1>{{dt|time:'H:i'}}</h1>-->
+
+<!-- {% if gm %}-->
+<!--<h1>hello {{gm}} </h1>-->
+<!--{% endif %}-->
+
+<!-- {% if gm and st  %}-->
+<!-- <h1>{{st}} seats are available for {{gm}}</h1>-->
+<!-- {% endif %}-->
+<!--     {% if gm == 'sohit' %}-->
+<!--     <h1>hello {{gm}}</h1>-->
+<!--     {% elif st == 5 %}-->
+<!--     <h1>seats {{st}}</h1>-->
+<!--     {% else %}-->
+<!--     <h1>no seats are available </h1>-->
+<!--     {% endif %}-->
+
+<!--     {% for i in names reversed %}-->
+<!--     {{forloop.counter}} {{i}} <br>-->
+<!--     {% endfor %}-->
+
+</body>
+</html>

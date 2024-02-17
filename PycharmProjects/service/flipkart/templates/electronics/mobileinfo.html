@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body >
+
+<div class="container"   >
+    <h1>Mobile Info Form</h1>
+  <form method="post">
+       {{form.as_p}}
+       {% csrf_token %}
+       <input type="submit" value="Submit">
+
+
+  </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 align="center"></h1>
+<table>
+{%if stud_list%}
+{% for student in stud_list %}
+<tr>
+    <td>{{ emp.id }}</td>
+    <td>{{ emp.name }}</td>
+    <td>{{emp.sal}}</td>
+
+</tr>
+    {% endfor %}
+</table>
+{% else %}
+<h1>no data found</h1>
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 align="center">Student list</h1>
+{% if stud_list %}
+<table border="1px" align="center">
+    <thead>
+<th>Company Name</th>
+<th>Price</th>
+<th>Model</th>
+<th>colours</th>
+<th>network_band </th>
+
+   </thead>
+
+{% for student in stud_list %}
+<tr>
+    <td>{{ student.company_name}}</td>
+    <td>{{ student.price }}</td>
+    <td>{{ student.model }}</td>
+    <td>{{ student.colours }}</td>
+    <td>{{ student.network_band }}</td>
+
+
+</tr>
+    {% endfor %}
+
+</table>
+{%else%}
+{% endif %}
+</body>
+</html>

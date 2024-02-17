@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block baseblock %}
+<h1>Course Upadte Form</h1>
+
+
+<form method="POST">
+    {%csrf_token%}
+
+    Course Name :<input type="text"name="cname" value="{{obj.cname}}">
+     <p></p>
+    Course Name :<input type="text"name="cduration" value="{{obj.cduration}}">
+     <p></p>
+    Course Name :<input type="text"name="cfees" value="{{obj.cfees}}">
+     <p></p>
+    Course Name :<input type="text"name="cmentor" value="{{obj.cmentor}}">
+     <p></p>
+    <input type="submit" class="btn btn-primary btn-lg"value="Update">
+
+</form>
+
+
+
+{%endblock%}
+</body>
+</html>

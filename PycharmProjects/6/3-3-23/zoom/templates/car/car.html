@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <style>
+          .main{
+
+               width:100000px;
+               background-color:orange;
+               colour:black;
+               padding: 30px;
+               font-size:20px;
+
+          }
+    </style>
+</head>
+<body>
+    {%for i in cars%}
+    <div>{{forloop.counter}} {{i}}</div>
+    {%endfor%}
+     <br/>
+     <table border="1" cellpadding="10">
+         <tr>
+             <th>Name</th>
+             <th>Contact No</th>
+         </tr>
+         {% for d  in student_details %}
+         <tr>
+             <td>{{d.name}}</td>
+             <td>{{d.phone}}</td>
+         </tr>
+         {% endfor %}
+     </table>
+    {% if numbers|length > 0 %}
+    {%for n in numbers%}
+        {% if n > 20 %}
+        <div>{{n}}</div>
+        {% endif %}
+
+     {%endfor%}
+    {% else %}
+         no data found
+    {% endif %}
+
+<img src = "{% static 'image/img.jpg'%}"alt="My image">
+
+   </body>
+</html>

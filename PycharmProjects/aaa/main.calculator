@@ -1,0 +1,6 @@
+# print(10 * "hello world\n")
+print("enter the first number")
+n1 = input ()
+print("enter the second number")
+n2 = input ()
+print("the sum:",int(n1) + int (n2))
